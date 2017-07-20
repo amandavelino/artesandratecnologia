@@ -1,0 +1,55 @@
+//fontes
+
+  //font-family: 'Exo 2', sans-serif;
+  //font-family: 'Arimo', sans-serif;
+  //font-family: 'Roboto', sans-serif;
+
+  $font-nav: 'Roboto', sans-serif;
+  $font-main: $font-nav;
+  $font-title: 'sifonnbasic', sans-serif;
+
+  $font-size-base: 10px;
+  $font-size-txt: $font-size-base * 1.4;
+  $font-weight-base: 100;
+  $line-height: $font-size-base * 1.2;
+
+//cores
+
+  $color-main: #fff;
+  $color-texto: #a6a6a6;
+  $color-title-second: #373737;
+  $red-controler: #e83f15;//#ff3300
+
+  $color-bg-site: #323232;
+  $bg-header: $color-bg-site;
+  $color-bg-section-light: $bg-header;
+  $bg-amarelo: #cfa144;
+  $color-bg-section-dark: #292929;
+  $color-header-bg-title: #313131;
+
+//tamanhos de telas
+
+  $desktop: 1200px; //ou maior
+  $tablet-land: 960px;
+  $tablet-port: 768px;
+  $mobile-land: 480px;
+  $mobile-port: 320px;
+
+//susy
+
+  $susy:(
+
+      columns: 12, // num de colunas do grid
+      container: 1120px, // largura do container
+      global-box-sizing: border-box,
+      gutter-position: split,
+      gutters: 1,
+      debug: (
+
+  	    image: hide,
+  	    color: rgba(#66f, .25),
+  	    output: background,
+  	    toggle: top right
+    	
+    	)
+  );

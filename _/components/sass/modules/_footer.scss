@@ -1,0 +1,33 @@
+footer
+{
+	background: $color-bg-site;
+	position: relative;
+	padding: 2em 0 1em;
+
+	h3 
+	{
+		color: #f1f1f1;
+		font-size: $font-size-base * 1.4;
+		letter-spacing: 1px;
+		line-height: 1.5em;
+		text-transform: uppercase;
+
+		a 
+		{
+			color: #f1f1f1;	
+			text-decoration: none;
+		}
+
+		.icon 
+		{
+			margin-right: .5em;
+			display: block;
+			float: left;
+		}
+
+		strong
+		{
+			font-weight: normal;
+		}
+	}
+}

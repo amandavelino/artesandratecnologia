@@ -1,0 +1,153 @@
+section#home
+{
+
+	background: url("../imgs/banner/recife-antigo.jpg") no-repeat center center;
+	background-size: cover;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh; // importante: altura da viewport da tela
+	min-height: 100%;
+	z-index: 0; //abaixo do header
+
+	&:before 
+	{
+		background: rgba(60, 60, 60, 0.3);
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+
+	&:after 
+	{
+		background: url("../imgs/pattern.png") repeat top left;
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 5;
+	}
+
+	.txts 
+	{
+		width: 550px;
+		position: absolute;
+		left: 50%;
+		top: 45%;
+		margin: 0 0 0 -275px;
+		z-index: 30;
+
+		// < 768px
+		@media screen and (max-width: ($tablet-port - 1)) {
+			width: 430px;
+			margin: 0 0 0 -215px;	
+		}	
+
+		// < 480px
+		@media screen and (max-width: ( $mobile-land - 1)) {
+			width: 270px;
+			margin: 0 0 0 -135px;		
+		}
+
+		.txt 
+		{
+			border-top: 1px solid $red-controler;
+			border-bottom: 1px solid $red-controler;
+			padding: 1em 0;	
+			position: absolute;	
+			
+			@include transition(all, 1.2s, ease-out, 0s);
+			@include opacity(0);			
+
+			&.active
+			{
+				@include opacity(100);
+			}
+		}		
+
+	}
+
+	h2
+	{
+		color: #e8e8e8;
+		font-family: $font-title;
+		font-size: $font-size-base * 2.8;
+		line-height: 1.3em;
+		letter-spacing: 1px;
+		padding: 0;
+		text-transform: uppercase;
+		text-align: center;
+		text-shadow: 0px 0px 10px rgba(0, 0, 0, .5);
+
+		// < 768px
+		@media screen and (max-width: ($tablet-port - 1)) {
+			font-size: $font-size-base * 2.5;
+		}
+
+		// < 480px
+		@media screen and (max-width: ( $mobile-land - 1)) {
+			font-size: $font-size-base * 2;			
+		}		
+
+	}
+
+}//
+
+#seta-down
+{
+	background: url("../imgs/arrow-down.png") no-repeat 0 0;
+	width: 30px;
+	height: 16px;
+
+	position: absolute;
+	bottom: 5%;
+	left: 50%;
+	margin-left: -8px;
+	z-index: 20;
+
+    -webkit-animation: arrows 3.8s infinite;
+    -webkit-animation-delay: 1s;
+    animation: arrows 3.8s infinite;
+    animation-delay: 1s;		
+}
+
+@keyframes arrows
+{
+	0% { bottom:30px; }
+	10% { bottom:40px; }
+	20% { bottom:30px; }
+	30% { bottom:40px; }
+	40% { bottom:20px; }
+	50% { bottom:40px; }
+	60% { bottom:30px; }
+	70% { bottom:40px; }
+	80% { bottom:20px; }
+	90% { bottom:40px; }
+	100% { bottom:30px; }
+}
+
+@-webkit-keyframes arrows
+{
+	0% { bottom:30px; }
+	10% { bottom:40px; }
+	20% { bottom:30px; }
+	30% { bottom:40px; }
+	40% { bottom:20px; }
+	50% { bottom:40px; }
+	60% { bottom:30px; }
+	70% { bottom:40px; }
+	80% { bottom:20px; }
+	90% { bottom:40px; }
+	100% { bottom:30px; }
+}

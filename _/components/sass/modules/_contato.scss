@@ -1,0 +1,220 @@
+section#contato
+{
+
+	min-height: auto; //por causa do footer
+	padding-bottom: 4em;
+
+	%btn 
+	{
+		background: $red-controler;
+		border: 0 none;
+		color: $color-main;
+		clear: both;
+		cursor: pointer;
+		display: block;
+		float: left;
+		font-family: $font-title;
+		font-size: $font-size-base * 1.4;
+		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: ( $font-size-base * 1.4 ) ( $font-size-base * 3 );
+		@include transition(all, .5s, ease-out, 0s);
+
+		&:hover,
+		&:focus
+		{
+			background: #c72b04;
+		}		
+	}
+	
+	#ajax_form
+	{
+		padding: 2em 0 0;
+	}
+
+	#obs 
+	{
+			padding: .5em 2.5em;
+		    height: 30px;
+		    margin-bottom: 2em;
+
+			// < 480px
+			@media screen and (max-width: ( $mobile-land - 1)) {
+				padding: .5em;
+			}		    
+
+		p 
+		{
+			color: $red-controler;
+			font-size: $font-size-base * 1.4;
+			line-height: 1.4em;
+			text-align: left;
+		}
+	}
+
+	p
+	{
+		text-align: center;
+		letter-spacing: 1px;
+
+		a 
+		{
+			color: $color-texto;
+			text-decoration: none;
+		}
+	}
+
+	.boxes
+	{
+		@include span(12 of 12 nest);
+
+		input[type="submit"]
+		{
+
+			@extend %btn;
+
+		}
+
+		fieldset
+		{
+			@include span(6 of 12);
+			// < 768px
+			@media screen and (max-width: ($tablet-port - 1)) {
+				@include span(12 of 12);
+			}
+
+			*
+			{
+				-webkit-appearance: none;
+				-moz-appearance:    none;
+				appearance:         none;
+				outline: none;			
+			}
+
+			label 
+			{
+				display: block;
+				width: 100%;
+				margin-bottom: 1em;
+			}
+
+			input,
+			textarea,
+			select 
+			{
+				background: #333;
+				border: 0 none;
+				border-bottom: 1px solid #555;
+				color: $color-main;
+				font-family: $font-nav;
+				font-size: $font-size-base * 1.4;
+				font-weight: $font-weight-base * 3;
+				letter-spacing: 1px;
+				padding: 1em;		
+				width: 100%;
+				@include transition(all, .5s, ease-out, 0s);
+				@include input-placeholder
+				{
+					color: $color-main;
+				}				
+			}
+
+			input[type="text"]:focus,
+			input[type="tel"]:focus,
+			input[type="email"]:focus,
+			textarea:focus,
+			select:focus
+			{
+				//background-color: #444;
+				border-bottom: 1px solid $red-controler;
+			} 			
+
+			select
+			{
+				background-image: url("../imgs/arrow-select.png");
+				background-repeat: no-repeat;
+				background-position: 97% 55%;
+			}
+
+			textarea
+			{
+				min-height: 106px;
+				max-height: 106px;
+				min-width: 513px;
+				max-width: 513px;
+				overflow: hidden;
+
+				//
+				@media screen and (max-width: $desktop) {
+					min-width: 430px;
+					max-width: 430px;	
+				}
+
+				// < 959px
+				@media screen and (max-width: ($tablet-land - 1)) {
+					min-width: 342px;
+					max-width: 342px;
+				}	
+
+				// < 768px
+				@media screen and (max-width: ($tablet-port - 1)) {
+					min-width: 440px;
+					max-width: 440px;
+				}	
+
+				// < 480px
+				@media screen and (max-width: ( $mobile-land - 1)) {
+					min-width: 285px;
+					max-width: 285px;
+				}	
+
+				// < 320px
+				@media screen and (max-width: ( $mobile-port - 1)) {
+					min-width: 258px;
+					max-width: 258px;
+				}																			
+
+			}
+
+			&.final
+			{
+				clear: both;
+				float: none;
+
+				input
+				{
+					width: auto;
+					// < 768px
+					@media screen and (max-width: ($tablet-port - 1)) {
+						width: 100%;
+					}
+
+				}
+
+			}			
+
+		}
+
+	}
+
+}//
+
+section#ok-error
+{
+	.resultado 
+	{
+		padding: 12em 0 0;
+		text-align: center;
+	}
+
+	.erro
+	{
+		color: $red-controler;
+	}
+
+	.sucesso 
+	{
+		color: green;
+	}
+}

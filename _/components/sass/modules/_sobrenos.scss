@@ -1,0 +1,48 @@
+section#sobre-nos
+{
+
+	.colunas
+	{
+		@include span(12 of 12 nest);
+	}
+
+	.coluna
+	{
+
+		@include span(4 of 12); 
+		// < 768px
+		@media screen and (max-width: ($tablet-port - 1)) {
+			@include span(12 of 12);	
+		}
+
+		header 
+		{
+			padding: 2em 0;
+		}
+
+		h3
+		{
+			font-size: $font-size-base * 2;
+
+			// < 959px
+			@media screen and (max-width: ($tablet-land - 1)) {
+				font-size: $font-size-base * 1.8;
+			}	
+
+		}
+
+		.icon 
+		{
+			display: inline-block;
+    		float: left;
+    		margin: -4px 10px 0 0;			
+		}
+
+		p 
+		{
+			text-align: justify;
+		}
+
+	}
+
+}//

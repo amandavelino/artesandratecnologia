@@ -1,0 +1,102 @@
+section#nossos-servicos
+{
+
+	background: $color-bg-section-light;
+
+	h1 
+	{
+		color: $color-title-second;
+	}
+
+	.colunas
+	{
+		@include span(12 of 12 nest);
+	}
+
+	.coluna
+	{
+
+		@include span(3 of 12);
+		height: 145px;
+
+		// < 768px
+		@media screen and (max-width: ($tablet-port - 1)) {
+			@include span(6 of 12);
+			margin-bottom: 2em;	
+		}
+
+		// < 480px
+		@media screen and (max-width: ( $mobile-land - 1)) {
+			@include span(12 of 12);
+			margin-bottom: 4em;	
+		}
+
+		h3
+		{
+			font-size: $font-size-base * 2;
+			text-align: center;
+			padding:1em 0;
+
+			// < 959px
+			@media screen and (max-width: ($tablet-land - 1)) {
+				font-size: $font-size-base * 1.8;
+			}	
+		}
+
+		.icon-servico 
+		{
+			// background: url("../imgs/icon_servicos.jpg") no-repeat 0 0;
+			width: 80px;
+			height: 80px;
+    		margin: 0 auto;			
+		}
+
+		.serv_01
+		{
+			background-position: -4px 0;
+		}
+
+		.serv_02
+		{
+			background-position: -257px 0;
+		}		
+
+		.serv_03
+		{
+			background-position: -503px 0;
+		}
+
+		.serv_04
+		{
+			background-position: -749px 0;
+		}		
+
+	}
+
+	.conteudo-servicos
+	{
+		@include span(12 of 12 nest);
+		padding: 5em 0 0;
+		// < 480px
+		@media screen and (max-width: ( $mobile-land - 1)) {
+			padding: 2em 0 0;				
+		}
+
+	}
+
+	.servico-txt
+	{
+		text-align: justify;
+		@include span(6 of 12);
+		// < 768px
+		@media screen and (max-width: ($tablet-port - 1)) {
+			@include span(12 of 12);
+		}
+
+		p 
+		{
+			text-align: justify;
+		}
+	}
+
+}//
